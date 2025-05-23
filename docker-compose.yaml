@@ -74,6 +74,10 @@ x-airflow-common:
     AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+<<<<<<< HEAD
+=======
+    #- ${AIRFLOW_PROJ_DIR}/dags:/opt/airflow/dags
+>>>>>>> 61955a37ef5a5d9515732e202e3786ed70126c69
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
@@ -101,6 +105,7 @@ services:
       start_period: 5s
     restart: always
 
+<<<<<<< HEAD
  
   pgadmin: 
     container_name: pgadmin4_container
@@ -113,6 +118,8 @@ services:
         - "5050:80"
 
 
+=======
+>>>>>>> 61955a37ef5a5d9515732e202e3786ed70126c69
   redis:
     # Redis is limited to 7.2-bookworm due to licencing change
     # https://redis.io/blog/redis-adopts-dual-source-available-licensing/
